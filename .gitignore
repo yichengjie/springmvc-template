@@ -2,6 +2,6 @@
 .idea
 .vscode
 target/
-OCUniTestPlatform.iml
-OCUniTestPlatform.ipr
-OCUniTestPlatform.iws
+springmvc-template.iml
+springmvc-template.ipr
+springmvc-template.iws
