@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.yicj</groupId>
-  <artifactId>OCUniTestPlatform</artifactId>
+  <artifactId>springmvc-tmeplate</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>OCUniTestPlatform Maven Webapp</name>
+  <name>springmvc-template Maven Webapp</name>
   <url>http://maven.apache.org</url>
     <properties>
         <jdk.version>1.7</jdk.version>
@@ -70,7 +70,7 @@
     </dependencies>
     <build>
         <!--最终生成的war文件名-->
-        <finalName>OCUniTestPlatform</finalName>
+        <finalName>springmvc-template</finalName>
     </build>
   
 </project>
