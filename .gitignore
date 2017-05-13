@@ -1,14 +1,6 @@
 .DS_Store
-node_modules
-bower_components
 .idea
 .vscode
-build/
-built/
-dist/
-output/
-npm-debug.log
-tsout/
 target/
 OCUniTestPlatform.iml
 OCUniTestPlatform.ipr
