@@ -8,7 +8,7 @@
   <name>springmvc-template Maven Webapp</name>
   <url>http://maven.apache.org</url>
     <properties>
-        <jdk.version>1.7</jdk.version>
+        <java.version>1.7</java.version>
         <spring.version>4.1.1.RELEASE</spring.version>
         <jstl.version>1.2</jstl.version>
         <junit.version>4.11</junit.version>
@@ -71,6 +71,32 @@
     <build>
         <!--最终生成的war文件名-->
         <finalName>springmvc-template</finalName>
+         <plugins>
+            <!--
+            在3.1版本以后maven-compiler-plugin将compilerArguments定为过时了，
+            建议大家按下面的方法写。 其中表示javac平时用空格隔开的的每一个参数。
+            其中${project.basedir}一定要写，不然会出现“在windows”下可以正常编译，
+            在Linux服务器上就“有可能”出现编译找不到jar包的错误-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>UTF-8</encoding>
+                    <compilerArgs>
+                        <arg>-verbose</arg>
+                        <arg>-Xlint:unchecked</arg>
+                        <arg>-Xlint:deprecation</arg>
+                        <arg>-bootclasspath</arg>
+                        <arg>${env.JAVA_HOME}/jre/lib/rt.jar</arg>
+                        <arg>-extdirs</arg>
+                        <arg>${project.basedir}/src/main/webapp/WEB-INF/lib</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
   
 </project>
